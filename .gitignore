@@ -1,0 +1,11 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# local dev server / build artifacts
+__pycache__/
+*.pyc
+node_modules/
