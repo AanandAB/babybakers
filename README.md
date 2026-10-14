@@ -78,9 +78,19 @@ single biggest visual upgrade you can make.
 
 ## Deploying to GitHub Pages
 
-1. Create a repo (e.g. `AanandAB/Babybakers`) and push these files.
-2. Repo **Settings → Pages → Source: `main` branch, `/root`** → Save.
-3. Site goes live at `https://aanandab.github.io/Babybakers/`.
+**Live now: https://aanandab.github.io/babybakers/**
+
+The repo (`AanandAB/babybakers`) publishes straight from the `main` branch:
+
+- **Pages setting:** Settings → Pages → Source = **Deploy from a branch**, `main`, `/ (root)`
+- **`.nojekyll`** in the repo root stops GitHub from running the site through Jekyll,
+  so every file is served exactly as committed.
+- **No build step.** Just commit and push to `main` — GitHub redeploys automatically
+  in about a minute (watch it under the repo's **Actions** tab).
+
+> The site is served from a subpath (`/babybakers/`), so all links and asset paths
+> are **relative** (`css/style.css`, `assets/images/…`). Keep them relative — a path
+> starting with `/` would break on the project-site URL but work locally.
 
 It's a static site (HTML/CSS/JS), so GitHub Pages, Netlify, Cloudflare Pages, or
 any static host works with zero configuration.
